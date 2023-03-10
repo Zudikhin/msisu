@@ -116,17 +116,17 @@
                 <img src="img/application/otrasli_icon.svg" alt="">
               </div>
               <div class="application_page_block_sidebar_wrap_search">
-                <input type="text" placeholder="Поиск">
+                <input type="text" placeholder="Поиск" id="industries_search">
               </div>
-              <div class="application_page_block_sidebar_wrap_reset">
+              <div class="application_page_block_sidebar_wrap_reset industry_reset">
                 <img src="img/application/repeat_icon.svg" alt="">
                 <span>Сбросить отрасли</span>
               </div>
-              <ul>
-                <li data-filter="otrasil-1">Отрасль 1</li>
-                <li data-filter="otrasil-2">Отрасль 2</li>
-                <li data-filter="otrasil-3">Отрасль 3</li>
-                <li data-filter="otrasil-4">Отрасль 4</li>
+              <ul class="list_feature" id="industries_list">
+                <li data-art="Отрасль 1" data-filter="otrasil-1">Отрасль 1</li>
+                <li data-art="Отрасль 2" data-filter="otrasil-2">Отрасль 2</li>
+                <li data-art="Отрасль 3" data-filter="otrasil-3">Отрасль 3</li>
+                <li data-art="Отрасль 4" data-filter="otrasil-4">Отрасль 4</li>
               </ul>
             </div>
 
@@ -136,17 +136,17 @@
                 <img src="img/application/tags_icon.svg" alt="">
               </div>
               <div class="application_page_block_sidebar_wrap_search">
-                <input type="text" placeholder="Поиск">
+                <input type="text" placeholder="Поиск" id="tags_search">
               </div>
-              <div class="application_page_block_sidebar_wrap_reset">
+              <div class="application_page_block_sidebar_wrap_reset tags_reset">
                 <img src="img/application/repeat_icon.svg" alt="">
-                <span>Сбросить отрасли</span>
+                <span>Сбросить теги</span>
               </div>
-              <ul>
-                <li data-filter="tag-1">Тег 1</li>
-                <li data-filter="tag-2">Тег 2</li>
-                <li data-filter="tag-3">Тег 3</li>
-                <li data-filter="tag-4">Тег 4</li>
+              <ul class="list_feature" id="tags_list">
+                <li data-art="Тег 1" data-filter="tag-1">Тег 1</li>
+                <li data-art="Тег 2" data-filter="tag-2">Тег 2</li>
+                <li data-art="Тег 3" data-filter="tag-3">Тег 3</li>
+                <li data-art="Тег 4" data-filter="tag-4">Тег 4</li>
               </ul>
             </div>
 
@@ -169,7 +169,7 @@
 
             </div>
             <div class="application_page_block_main_filter">
-              
+
               <div class="application_page_block_main_filter_item industries_mob">
                 <span>Отрасли</span>
                 <img src="img/application/otrasli_icon.svg" alt="">
@@ -188,8 +188,8 @@
             </div>
             <div class="application_page_block_main_list">
 
-              <a data-tags="otrasil-1, tag-2" class="application_page_block_main_list_item" href="#">
-                <h2>Карточка Пример решения 1</h2>
+              <a data-popular="50" data-date="2012-04-15" data-tags="otrasil-1, tag-2" class="application_page_block_main_list_item" href="#">
+                <h2>В Карточка Пример решения 1</h2>
                 <p class="application_page_block_main_list_item_text">Системный интегратор, который комплексно подходит к решению сложных технических задач, связанных с производственными процессами, мобильной и грузоподъёмной техникой.</p>
                 <div class="application_page_block_main_list_item_content">
                   <img src="img/news/1.png" alt="">
@@ -206,8 +206,8 @@
                 </div>
               </a>
 
-              <a data-tags="otrasil-2, tag-1" class="application_page_block_main_list_item" href="#">
-                <h2>Карточка Пример решения 2</h2>
+              <a data-popular="40" data-date="2012-04-10" data-tags="otrasil-2, tag-1" class="application_page_block_main_list_item" href="#">
+                <h2>А Карточка Пример решения 2</h2>
                 <p class="application_page_block_main_list_item_text">Системный интегратор, который комплексно подходит к решению сложных технических задач, связанных с производственными процессами, мобильной и грузоподъёмной техникой.</p>
                 <div class="application_page_block_main_list_item_content">
                   <img src="img/news/2.png" alt="">
@@ -224,8 +224,8 @@
                 </div>
               </a>
 
-              <a data-tags="otrasil-3, tag-3" class="application_page_block_main_list_item" href="#">
-                <h2>Карточка Пример решения 3</h2>
+              <a data-popular="60" data-date="2012-04-20" data-tags="otrasil-3, tag-3" class="application_page_block_main_list_item" href="#">
+                <h2>Б Карточка Пример решения 3</h2>
                 <p class="application_page_block_main_list_item_text">Системный интегратор, который комплексно подходит к решению сложных технических задач, связанных с производственными процессами, мобильной и грузоподъёмной техникой.</p>
                 <div class="application_page_block_main_list_item_content">
                   <img src="img/news/3.png" alt="">
@@ -242,8 +242,8 @@
                 </div>
               </a>
 
-              <a data-tags="otrasil-3, tag-2" class="application_page_block_main_list_item" href="#">
-                <h2>Карточка Пример решения 4</h2>
+              <a data-popular="90" data-date="2012-04-12" data-tags="otrasil-3, tag-2" class="application_page_block_main_list_item" href="#">
+                <h2>Г Карточка Пример решения 4</h2>
                 <p class="application_page_block_main_list_item_text">Системный интегратор, который комплексно подходит к решению сложных технических задач, связанных с производственными процессами, мобильной и грузоподъёмной техникой.</p>
                 <div class="application_page_block_main_list_item_content">
                   <img src="img/news/4.png" alt="">
@@ -260,8 +260,8 @@
                 </div>
               </a>
 
-              <a data-tags="otrasil-4, tag-4" class="application_page_block_main_list_item" href="#">
-                <h2>Карточка Пример решения 5</h2>
+              <a data-popular="100" data-date="2016-04-12" data-tags="otrasil-4, tag-4" class="application_page_block_main_list_item" href="#">
+                <h2>Ж Карточка Пример решения 5</h2>
                 <p class="application_page_block_main_list_item_text">Системный интегратор, который комплексно подходит к решению сложных технических задач, связанных с производственными процессами, мобильной и грузоподъёмной техникой.</p>
                 <div class="application_page_block_main_list_item_content">
                   <img src="img/news/4.jpeg" alt="">
@@ -278,8 +278,8 @@
                 </div>
               </a>
 
-              <a data-tags="otrasil-1, tag-4" class="application_page_block_main_list_item" href="#">
-                <h2>Карточка Пример решения 6</h2>
+              <a data-popular="110" data-date="2017-04-12" data-tags="otrasil-1, tag-4" class="application_page_block_main_list_item" href="#">
+                <h2>Р Карточка Пример решения 6</h2>
                 <p class="application_page_block_main_list_item_text">Системный интегратор, который комплексно подходит к решению сложных технических задач, связанных с производственными процессами, мобильной и грузоподъёмной техникой.</p>
                 <div class="application_page_block_main_list_item_content">
                   <img src="img/news/6.png" alt="">
@@ -429,8 +429,294 @@
       </div>
     </div>
 
+    <div class="modal_industries">
+
+      <div class="modal_industries_top">
+        <h4>Отрасли</h4>
+        <div class="modal_industries_top_close">
+          <img src="img/header/close.svg" alt="">
+        </div>
+      </div>
+
+      <div class="modal_industries_search">
+        <input type="text" placeholder="Поиск" id="industries_search_mob">
+      </div>
+
+      <div class="modal_industries_reset">
+        <img src="img/application/repeat_icon.svg" alt="">
+        <span>Сбросить отрасли</span>
+      </div>
+
+      <ul class="list_feature" id="industries_list_mob">
+        <li data-art="Отрасль 1" data-filter="otrasil-1">Отрасль 1</li>
+        <li data-art="Отрасль 2" data-filter="otrasil-2">Отрасль 2</li>
+        <li data-art="Отрасль 3" data-filter="otrasil-3">Отрасль 3</li>
+        <li data-art="Отрасль 4" data-filter="otrasil-4">Отрасль 4</li>
+      </ul>
+
+    </div>
+
+    <iframe src='https://www.astroworld.ru/horon/natal_p.htm' width=100% height=850 frameborder=0></iframe>
+
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/slick.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>
+
+
+
+
+<script>
+
+  var activeFilters = [];
+
+  $('.list_feature li').on('click', function() {
+
+    var check = false;
+
+    var fltr = $(this).data('filter'),
+      ind = activeFilters.indexOf(fltr);
+    if(ind >= 0){
+      activeFilters.splice(ind, 1);
+      $(this).removeClass('active');
+    } else {
+      activeFilters.push(fltr);
+      $(this).addClass('active');
+    }
+
+    $('.application_page_block_main_list').find('.application_page_block_main_list_item').each(function() {
+      var that = $(this);
+      that.removeClass('hidden');
+      $.each(activeFilters, function(i, v){
+        if(that.data("tags").indexOf(v)==-1){
+          that.addClass('hidden');
+        }
+      })
+    });
+
+  });
+
+  $("#industries_list li").on("click", function() {
+    var check = false;
+
+    $("#industries_list li").each(function() {
+      if($(this).hasClass("active")) {
+        check = true;
+      }
+    });
+
+    if(check == true) {
+      $(".industry_reset").addClass("active");
+    } else {
+      $(".industry_reset").removeClass("active");
+    }
+
+  });
+
+  $("#tags_list li").on("click", function() {
+    var check = false;
+
+    $("#tags_list li").each(function() {
+      if($(this).hasClass("active")) {
+        check = true;
+      }
+    });
+
+    if(check == true) {
+      $(".tags_reset").addClass("active");
+    } else {
+      $(".tags_reset").removeClass("active");
+    }
+
+  });
+
+  $("#industries_list_mob li").on("click", function() {
+    var check = false;
+
+    $("#industries_list_mob li").each(function() {
+      if($(this).hasClass("active")) {
+        check = true;
+      }
+    });
+
+    if(check == true) {
+      $(".modal_industries_reset").addClass("active");
+    } else {
+      $(".modal_industries_reset").removeClass("active");
+    }
+
+  });
+
+
+  $('#industries_search').on('keyup change', function() {
+
+    $('#industries_list').find('li').each(function() {
+      var that = $(this);
+      that.removeClass('hidden');
+    });
+
+    var tt = $(this);
+
+    if (tt.val() != '') {
+      $('#industries_list').find('li').each(function() {
+        var that = $(this);
+        if (!(that.attr("data-art")).match(new RegExp(tt.val(),'ig'))){
+          that.addClass('hidden');
+        }
+      });
+    }
+
+  });
+
+  $('#tags_search').on('keyup change', function() {
+
+    $('#tags_list').find('li').each(function() {
+      var that = $(this);
+      that.removeClass('hidden');
+    });
+
+    var tt = $(this);
+
+    if (tt.val() != '') {
+      $('#tags_list').find('li').each(function() {
+        var that = $(this);
+        if (!(that.attr("data-art")).match(new RegExp(tt.val(),'ig'))){
+          that.addClass('hidden');
+        }
+      });
+    }
+
+  });
+
+  $('#industries_search_mob').on('keyup change', function() {
+
+    $('#industries_list_mob').find('li').each(function() {
+      var that = $(this);
+      that.removeClass('hidden');
+    });
+
+    var tt = $(this);
+
+    if (tt.val() != '') {
+      $('#industries_list_mob').find('li').each(function() {
+        var that = $(this);
+        if (!(that.attr("data-art")).match(new RegExp(tt.val(),'ig'))){
+          that.addClass('hidden');
+        }
+      });
+    }
+
+  });
+
+</script>
+
+<script>
+
+  var isAscOrder = true;
+
+  $(".sort_alphabet").click(function() {
+
+    $(".application_page_block_main_sort_item").removeClass("active");
+
+    $(this).addClass("active");
+
+    var mylist = $('.application_page_block_main_list');
+    var listitems = mylist.children('a').get();
+
+    listitems.sort(function(a, b) {
+        var compA = $(a).text().toUpperCase();
+        var compB = $(b).text().toUpperCase();
+
+        return (isAscOrder ? 1 : -1) * ((compA < compB) ? -1 : (compA > compB) ? 1 : 0);
+    });
+
+    $.each(listitems, function(idx, itm) { 
+      mylist.append(itm); 
+    });
+
+  });
+
+</script>
+
+<script>
+
+  $(".sort_date").click(function() {
+    $(".application_page_block_main_sort_item").removeClass("active");
+    $(this).addClass("active");
+    function sortDescending(a, b) {
+      var date1 = $(a).attr("data-date");
+      date1 = new Date(date1);
+      var date2 = $(b).attr("data-date");
+      date2 = new Date(date2);
+      return date1 < date2 ? 1 : -1;
+    };
+
+    $('.application_page_block_main_list_item').sort(sortDescending).appendTo('.application_page_block_main_list');
+  });
+
+</script>
+
+<script>
+
+    $(".sort_popular").click(function() {
+      $(".application_page_block_main_sort_item").removeClass("active");
+      $(this).addClass("active");
+      function sortDescending(a, b) {
+        var date1 = $(a).attr("data-popular");
+        date1 = parseInt(date1);
+        var date2 = $(b).attr("data-popular");
+        date2 = parseInt(date2);
+        return date1 < date2 ? 1 : -1;
+      };
+
+      $('.application_page_block_main_list_item').sort(sortDescending).appendTo('.application_page_block_main_list');
+    });
+
+</script>
+
+<script>
+
+  $(".industry_reset").click(function() {
+    $("#industries_list li[class*='active']").each(function() {
+      $(this).trigger("click");
+    });
+    $(this).removeClass('active');
+  });
+
+</script>
+
+<script>
+
+  $(".tags_reset").click(function() {
+    $("#tags_list li[class*='active']").each(function() {
+      $(this).trigger("click");
+    });
+    $(this).removeClass('active');
+  });
+
+</script>
+
+<script>
+
+  $('#tags_search').on('keyup change', function() {
+
+    $('#tags_list').find('li').each(function() {
+      var that = $(this);
+      that.removeClass('hidden');
+    });
+
+    var tt = $(this);
+
+    if (tt.val() != '') {
+      $('#tags_list').find('li').each(function() {
+        var that = $(this);
+        if (!(that.attr("data-art")).match(new RegExp(tt.val(),'ig'))){
+          that.addClass('hidden');
+        }
+      });
+    }
+
+  });
+
+</script>

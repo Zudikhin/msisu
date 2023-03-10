@@ -24,6 +24,11 @@ $(document).ready(function () {
         }
     });
 
+    $(".modal_industries_top_close").click(function() {
+        $(".modal_industries").removeClass("active");
+        $(".back_modal").removeClass("active");
+    });
+
     $(".back_modal").click(function() {
         $("body").removeClass("scroll");
         $(this).removeClass("active");

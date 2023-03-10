@@ -1,0 +1,185 @@
+.footer {
+    margin-top: 40px;
+    box-sizing: border-box;
+    padding: 10px 0px 16px 0px;
+    background: #EDEDED;
+    &_block {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        &_left {
+            display: flex;
+            flex-direction: column;
+            width: 174px;
+            &_logo {
+                display: inline-block;
+                & img {
+                    width: 130px;
+                }
+            }
+            & p {
+                font-family: 'Montserrat', sans-serif;
+                font-weight: 500;
+                font-size: 11px;
+                line-height: 13px;
+                color: #808080;
+                margin: 0px;
+                margin-top: 5px;
+            }
+        }
+        &_right {
+            width: 156px;
+            box-sizing: border-box;
+            padding-top: 10px;
+            & ul {
+                list-style: none;
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                margin: 0px;
+                padding: 0px;
+                & li {
+                    margin-left: 15px;
+                    &:first-child {
+                        margin-left: 0px;
+                    }
+                    &:nth-child(4n+1) {
+                        margin-left: 0px;
+                    }
+                    & a {
+                        font-size: 30px;
+                        color:#787878;
+                        transition: all 0.2s linear;
+                        &:hover {
+                            color: #313131;
+                            transition: all 0.2s linear;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media (min-width: 768px) {
+        padding: 16px 0px;
+        margin-top: 60px;
+        &_block {
+            align-items: center;
+            &_left {
+                width: auto;
+                flex-direction: row;
+                align-items: center;
+                &_logo {
+                    & img {
+                        width: 146px;
+                    }
+                }
+                & p {
+                    font-size: 14px;
+                    line-height: 17px;
+                    margin-left: 30px;
+                    width: 124px;
+                    margin-top: 0px;
+                }
+            }
+            &_right {
+                padding-top: 0px;
+                width: auto;
+                & ul {
+                    & li {
+                        &:nth-child(4n+1) {
+                            margin-left: 15px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media (min-width: 1200px) {
+        margin-top: 80px;
+        padding: 25px 0px;
+        &_block {
+            &_left {
+                &_logo {
+                    & img {
+                        width: auto;
+                    }
+                }
+                & p {
+                    font-size: 16px;
+                    line-height: 20px;
+                    width: 238px;
+                }
+            }
+        }
+    }
+}
+
+.block_politic {
+    box-sizing: border-box;
+    background: #787878;
+    padding: 15px 0px;
+    &_block {
+        &_left {
+            & p {
+                font-family: 'Montserrat', sans-serif;
+                font-weight: 400;
+                font-size: 12px;
+                line-height: 15px;
+                color: #FFFFFF;
+                margin: 0px;
+            }
+        }
+        &_right {
+            display: flex;
+            flex-direction: column;
+            & a {
+                font-family: 'Montserrat', sans-serif;
+                font-weight: 400;
+                font-size: 12px;
+                line-height: 15px;
+                text-decoration-line: underline;
+                color: #FFFFFF;
+                display: inline-block;
+                margin-top: 13px;
+            }
+        }
+    }
+    @media (min-width: 768px) {
+        padding: 18px 0px;
+        &_block {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            &_left {
+                & p {
+                    font-size: 12px;
+                    line-height: 15px;
+                }
+            }
+            &_right {
+                flex-direction: row;
+                & a {
+                    font-size: 12px;
+                    line-height: 15px;
+                    position: relative;
+                    margin-top: 0px;
+                    &:first-child {
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            right: -12px;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            height: 20px;
+                            width: 1px;
+                            background-color: #FFFFFF;
+                        }
+                    }
+                    &:last-child {
+                        margin-left: 24px;
+                    }
+                }
+            }
+        }
+    }
+}
