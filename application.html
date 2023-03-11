@@ -180,7 +180,7 @@
                 <img src="img/application/tags_icon.svg" alt="">
               </div>
 
-              <div class="application_page_block_main_filter_item tags_mob">
+              <div class="application_page_block_main_filter_item sort_mob">
                 <span>Сортировка и поиск</span>
                 <img src="img/application/arrow.svg" alt="">
               </div>
@@ -456,16 +456,58 @@
 
     </div>
 
-    <iframe src='https://www.astroworld.ru/horon/natal_p.htm' width=100% height=850 frameborder=0></iframe>
+    <div class="modal_tags">
+
+      <div class="modal_tags_top">
+        <h4>Теги</h4>
+        <div class="modal_tags_top_close">
+          <img src="img/header/close.svg" alt="">
+        </div>
+      </div>
+
+      <div class="modal_tags_search">
+        <input type="text" placeholder="Поиск" id="tags_search_mob">
+      </div>
+
+      <div class="modal_tags_reset">
+        <img src="img/application/repeat_icon.svg" alt="">
+        <span>Сбросить теги</span>
+      </div>
+
+      <ul class="list_feature" id="tags_list_mob">
+        <li data-art="Тег 1" data-filter="tag-1">Тег 1</li>
+        <li data-art="Тег 2" data-filter="tag-2">Тег 2</li>
+        <li data-art="Тег 3" data-filter="tag-3">Тег 3</li>
+        <li data-art="Тег 4" data-filter="tag-4">Тег 4</li>
+      </ul>
+
+    </div>
+
+    <div class="modal_sort">
+      <div class="modal_sort_top">
+        <h4>Сортировка</h4>
+        <div class="modal_sort_top_close">
+          <img src="img/header/close.svg" alt="">
+        </div>
+      </div>
+      <div class="modal_sort_content">
+        <div class="modal_sort_content_item sort_alphabet">
+          <span>По алфавиту</span>
+        </div>
+        <div class="modal_sort_content_item sort_date">
+          <span>По дате</span>
+        </div>
+        <div class="modal_sort_content_item sort_popular">
+          <span>По популярности</span>
+        </div>
+      </div>
+    </div>
 
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/slick.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>
-
-
-
 
 <script>
 
@@ -548,6 +590,22 @@
 
   });
 
+  $("#tags_list_mob li").on("click", function() {
+    var check = false;
+
+    $("#tags_list_mob li").each(function() {
+      if($(this).hasClass("active")) {
+        check = true;
+      }
+    });
+
+    if(check == true) {
+      $(".modal_tags_reset").addClass("active");
+    } else {
+      $(".modal_tags_reset").removeClass("active");
+    }
+
+  });
 
   $('#industries_search').on('keyup change', function() {
 
@@ -609,6 +667,27 @@
 
   });
 
+  $('#tags_search_mob').on('keyup change', function() {
+
+    $('#tags_list_mob').find('li').each(function() {
+      var that = $(this);
+      that.removeClass('hidden');
+    });
+
+    var tt = $(this);
+
+    if (tt.val() != '') {
+      $('#tags_list_mob').find('li').each(function() {
+        var that = $(this);
+        if (!(that.attr("data-art")).match(new RegExp(tt.val(),'ig'))){
+          that.addClass('hidden');
+        }
+      });
+    }
+
+  });
+  
+
 </script>
 
 <script>
@@ -618,6 +697,7 @@
   $(".sort_alphabet").click(function() {
 
     $(".application_page_block_main_sort_item").removeClass("active");
+    $(".modal_sort_content_item").removeClass("active");
 
     $(this).addClass("active");
 
@@ -643,6 +723,7 @@
 
   $(".sort_date").click(function() {
     $(".application_page_block_main_sort_item").removeClass("active");
+    $(".modal_sort_content_item").removeClass("active");
     $(this).addClass("active");
     function sortDescending(a, b) {
       var date1 = $(a).attr("data-date");
@@ -661,6 +742,7 @@
 
     $(".sort_popular").click(function() {
       $(".application_page_block_main_sort_item").removeClass("active");
+      $(".modal_sort_content_item").removeClass("active");
       $(this).addClass("active");
       function sortDescending(a, b) {
         var date1 = $(a).attr("data-popular");
@@ -719,4 +801,22 @@
 
   });
 
+</script>
+
+<script>
+  $(".modal_industries_reset").click(function() {
+    $("#industries_list_mob li[class*='active']").each(function() {
+      $(this).trigger("click");
+    });
+    $(this).removeClass('active');
+  });
+</script>
+
+<script>
+  $(".modal_tags_reset").click(function() {
+    $("#tags_list_mob li[class*='active']").each(function() {
+      $(this).trigger("click");
+    });
+    $(this).removeClass('active');
+  });
 </script>
