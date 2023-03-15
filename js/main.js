@@ -59,6 +59,16 @@ $(document).ready(function () {
         $(".back_modal").addClass("active");
         $(".modal_tags").addClass("active");
     });
+
+    $(".contacts_partners_top_right_btn").click(function() {
+        $("body").addClass("scroll");
+        $(".back_modal").addClass("active");
+        $(".modal_tags_contact").addClass("active");
+    });
+
+    $(".contacts_partners_block_list_item_btn").click(function() {
+        $(this).parent().parent().toggleClass("active");
+    });
     
     $(".back_modal").click(function() {
         $("body").removeClass("scroll");
@@ -66,7 +76,14 @@ $(document).ready(function () {
         $(".modal_drop").removeClass("active");
         $(".modal_industries").removeClass("active");
         $(".modal_tags").removeClass("active");
+        $(".modal_tags_contact").removeClass("active");
         $(".modal_sort").removeClass("active");
+    });
+
+    $(".modal_tags_contact_top_close").click(function() {
+        $("body").removeClass("scroll");
+        $(".back_modal").removeClass("active");
+        $(".modal_tags_contact").removeClass("active");
     });
 
     $(".modal_drop_top_close").click(function() {
