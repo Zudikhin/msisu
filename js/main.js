@@ -3,7 +3,7 @@ $(document).ready(function () {
 
     $(window).scroll(function() {
         if($(window).width() > 1199) {
-            if ($(this).scrollTop() > 120) {
+            if ($(this).scrollTop() > 0) {
                 $(".header").addClass("active");
                 $(".drop_desktop").addClass("hide");
             } else {
@@ -15,8 +15,8 @@ $(document).ready(function () {
 
     $(".header_block_top_content_burger").click(function() {
         if($(window).width() > 1199) {
-            $(".header").removeClass("active");
-            $(".drop_desktop").removeClass("hide");
+            $(".header").toggleClass("active");
+            $(".drop_desktop").toggleClass("hide");
         } else {
             $(".back_modal").addClass("active");
             $(".modal_drop").addClass("active");

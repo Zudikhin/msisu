@@ -800,7 +800,7 @@ a:hover {
 @media (min-width: 1200px) {
   .container {
     padding: 0px;
-    max-width: 1140px;
+    max-width: 1040px;
   }
 }
 body {
@@ -1029,9 +1029,6 @@ body.scroll {
   .header_block_top_logo img {
     width: auto;
   }
-  .header_block_top_content_burger {
-    display: none;
-  }
   .header.active .header_block_top_content_burger {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1059,10 +1056,9 @@ body.scroll {
 @media (min-width: 1200px) {
   .drop_desktop {
     display: block;
-    height: 65px;
+    height: 50px;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
-    padding: 16px 0px 25px 0px;
     top: 95px;
   }
   .drop_desktop ul {
@@ -1246,7 +1242,7 @@ body.scroll {
 }
 @media (min-width: 1200px) {
   .main {
-    padding-top: 160px;
+    padding-top: 50px;
   }
   .main_item {
     height: 650px;
@@ -1264,7 +1260,7 @@ body.scroll {
   }
   .main .slick-dots {
     bottom: 68px;
-    width: 1140px;
+    width: 1040px;
     margin: 0 auto;
     left: 50%;
     -webkit-transform: translateX(-50%);
@@ -3008,7 +3004,7 @@ body.scroll {
 }
 @media (min-width: 1200px) {
   .production_page {
-    padding-top: 200px;
+    padding-top: 160px;
     min-height: calc(100vh - 260px);
   }
   .production_page_block {
@@ -3786,7 +3782,7 @@ body.scroll {
 }
 @media (min-width: 1200px) {
   .single_application {
-    padding-top: 185px;
+    padding-top: 160px;
   }
   .single_application_block {
     font-size: 18px;
@@ -4057,7 +4053,7 @@ body.scroll {
 }
 @media (min-width: 1200px) {
   .parent_cat {
-    padding-top: 204px;
+    padding-top: 160px;
   }
   .parent_cat_block {
     display: -webkit-box;
@@ -4077,6 +4073,9 @@ body.scroll {
     border: 1px solid #EEEEEE;
     border-radius: 10px;
     display: block;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding-top: 13px;
   }
   .parent_cat_block_sidebar_top {
     display: -webkit-box;
